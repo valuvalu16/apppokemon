@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeApp - Primeros 5 Pokemon</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🔴 PokeApp</h1>
+        <p>Descubre los primeros 5 Pokemon usando PokeAPI</p>
+    </header>
+
+    <main>
+        <div id="loading" class="loading">
+            <div class="pokeball"></div>
+            <p>Cargando Pokemon...</p>
+        </div>
+        
+        <div id="pokemon-container" class="pokemon-container hidden">
+            <!-- Las tarjetas de Pokemon se generarán aquí -->
+        </div>
+        
+        <div id="error" class="error hidden">
+            <p>❌ Error al cargar los Pokemon. Por favor, intenta de nuevo.</p>
+            <button onclick="loadPokemon()">Reintentar</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>Datos obtenidos de <a href="https://pokeapi.co/" target="_blank">PokeAPI</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

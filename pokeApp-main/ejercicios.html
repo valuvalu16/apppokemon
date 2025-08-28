@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeApp - EJERCICIOS PARA ESTUDIANTES</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos adicionales para la versión de ejercicios */
+        .exercise-header {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ffa500 100%);
+            padding: 1rem;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+        }
+        
+        .exercise-instructions {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            color: white;
+        }
+        
+        .exercise-instructions h3 {
+            color: #ffa500;
+            margin-bottom: 1rem;
+        }
+        
+        .exercise-instructions ul {
+            margin-left: 2rem;
+        }
+        
+        .exercise-instructions li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .code-hint {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 0.5rem;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            margin: 0.5rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="exercise-header">
+        <h1>🎓 EJERCICIOS DE PROGRAMACIÓN</h1>
+        <p>Completa el código JavaScript para hacer funcionar la PokeApp</p>
+    </div>
+
+    <div class="exercise-instructions">
+        <h3>📋 INSTRUCCIONES:</h3>
+        <ul>
+            <li>🔍 Abre el archivo <strong>script-ejercicios.js</strong> en tu editor de código</li>
+            <li>📝 Busca los comentarios <strong>TODO</strong> y completa el código</li>
+            <li>💾 Guarda los cambios y recarga esta página</li>
+            <li>🛠️ Abre las herramientas de desarrollador (F12) para ver errores</li>
+            <li>✅ Cuando funcione, verás las tarjetas de Pokemon abajo</li>
+        </ul>
+        
+        <h3>🔧 HERRAMIENTAS ÚTILES:</h3>
+        <ul>
+            <li><strong>Consola del navegador:</strong> Presiona F12 y ve a la pestaña "Console"</li>
+            <li><strong>Network tab:</strong> Para ver las peticiones HTTP a la API</li>
+            <li><strong>PokeAPI docs:</strong> <a href="https://pokeapi.co/docs/v2" target="_blank">https://pokeapi.co/docs/v2</a></li>
+        </ul>
+        
+        <h3>💡 PISTAS RÁPIDAS:</h3>
+        <div class="code-hint">const response = await fetch(URL);</div>
+        <div class="code-hint">if (!response.ok) throw new Error('Error');</div>
+        <div class="code-hint">const data = await response.json();</div>
+        <div class="code-hint">const results = await Promise.all(promises);</div>
+    </div>
+
+    <header>
+        <h1>🔴 PokeApp</h1>
+        <p>Descubre los primeros 5 Pokemon usando PokeAPI</p>
+    </header>
+
+    <main>
+        <div id="loading" class="loading">
+            <div class="pokeball"></div>
+            <p>Cargando Pokemon...</p>
+        </div>
+        
+        <div id="pokemon-container" class="pokemon-container hidden">
+            <!-- Las tarjetas de Pokemon se generarán aquí cuando completes el código -->
+        </div>
+        
+        <div id="error" class="error hidden">
+            <p>❌ Error al cargar los Pokemon.</p>
+            <p>🤔 ¿Has completado todos los TODOs en script-ejercicios.js?</p>
+            <button onclick="loadPokemon()">Reintentar</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>Datos obtenidos de <a href="https://pokeapi.co/" target="_blank">PokeAPI</a></p>
+        <p>👨‍💻 ¡Completa los ejercicios para hacer funcionar la app!</p>
+    </footer>
+
+    <!-- IMPORTANTE: Cambiamos la referencia al archivo de ejercicios -->
+    <script src="script-ejercicios.js"></script>
+</body>
+</html>
