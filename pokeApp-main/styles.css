@@ -297,3 +297,93 @@ footer a:hover {
         max-height: 100px;
     }
 }
+/* =========================
+   Sección de Stats Extras
+   ========================= */
+.pokemon-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    gap: 1rem;
+}
+
+.pokemon-stats .stat {
+    flex: 1;
+    text-align: center;
+}
+
+/* Etiqueta de la stat */
+.pokemon-stats .stat-label {
+    font-size: 0.75rem;
+    color: #444;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.3rem;
+}
+
+/* Valor de la stat */
+.pokemon-stats .stat-value {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+
+/* Barra de progreso */
+.stat-bar {
+    width: 100%;
+    height: 6px;
+    border-radius: 5px;
+    background: #e0e0e0;
+    overflow: hidden;
+    position: relative;
+}
+
+.stat-bar-fill {
+    height: 100%;
+    border-radius: 5px;
+    transition: width 0.5s ease;
+}
+
+/* Colores personalizados para cada stat */
+.stat-ataque .stat-bar-fill { background: #f44336; }   /* rojo */
+.stat-defensa .stat-bar-fill { background: #2196f3; }  /* azul */
+.stat-velocidad .stat-bar-fill { background: #4caf50; } /* verde */
+
+/* Botón de cargar más Pokémon */
+#load-more {
+    display: inline-block;
+    margin: 2rem auto;
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #ff6b6b, #f06595, #ff9ff3);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Efecto hover */
+#load-more:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    background: linear-gradient(135deg, #ff8787, #f093b3, #ffc6ff);
+}
+
+/* Efecto activo/click */
+#load-more:active {
+    transform: translateY(0) scale(0.98);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Centrar el botón */
+.load-more-container {
+    text-align: center;
+}
